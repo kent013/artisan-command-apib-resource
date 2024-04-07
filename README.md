@@ -1,15 +1,11 @@
 # artisan-command-spectator-test
 
-Artisan make command to generate HTTP testcases with OpenAPI and [spectator](https://github.com/hotmeteor/spectator).
+Artisan command to generate apib snippet.
 
 ## Disclaimer
 
-This command generate only a scaffold. You need further implementation to test your API.
-
-I'm using [api blueprint](https://apiblueprint.org/) for API specification.
-Generating OpenAPI json with using [apib2swagger](https://github.com/kminami/apib2swagger).
-
-While I'm not writing OpenAPI directly, some data such as operation ID is not natural. Perhaps it will cause a problem on this command.
+Not completed.
+Only processable Enums and JsonResource.
 
 ## Installation
 
@@ -17,10 +13,16 @@ While I'm not writing OpenAPI directly, some data such as operation ID is not na
 composer require --dev kent013/artisan-command-spectator-test
 ```
 
-## Generate config file
+## Example 
 
 ```
-php artisan vendor:publish --tag="spectator-test"
+generate:apib App/Enums/Region --file
+generate:apib App/Http/Resources/SomeObjectResource --file
 ```
 
-## Configuration
+use `--output-directory` option to specify dir. Otherwise it outputs into `tmp/apib`
+
+```[]
+generate:apib App/Enums/Region --stdout
+generate:apib App/Http/Resources/SomeObjectResource --stdout
+```
