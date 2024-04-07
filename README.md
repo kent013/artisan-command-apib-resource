@@ -10,7 +10,7 @@ Only processable Enums and JsonResource.
 ## Installation
 
 ```
-composer require --dev kent013/artisan-command-spectator-test
+composer require --dev kent013/artisan-command-apib-resource 
 ```
 
 ## Example 
