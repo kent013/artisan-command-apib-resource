@@ -1,7 +1,7 @@
 {
   "name": "kent013/artisan-command-apib-resource",
   "description": "An artisan command to generate API resource from Factory/Enum.",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "keywords": [
     "artisan",
     "laravel",
